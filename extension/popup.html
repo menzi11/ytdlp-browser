@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>yt-dlp 下载</title>
+</head>
+<body>
+  <header>
+    <div class="brand">yt-dlp</div>
+    <div class="meta" id="meta">连接中…</div>
+  </header>
+
+  <div class="field">
+    <input id="url" type="text" spellcheck="false" placeholder="视频或播放列表地址">
+  </div>
+
+  <div class="info" id="info" hidden>
+    <div class="title" id="title"></div>
+    <div class="sub" id="sub"></div>
+  </div>
+
+  <div class="label">画质</div>
+  <div class="seg" id="mode">
+    <button data-mode="best" class="on">最高</button>
+    <button data-mode="cap1080">1080P</button>
+    <button data-mode="audio">仅音频</button>
+    <button data-mode="subs">仅字幕</button>
+  </div>
+
+  <div id="audioRow" hidden>
+    <div class="label">音频格式</div>
+    <div class="seg" id="audio">
+      <button data-audio="mp3" class="on">mp3</button>
+      <button data-audio="m4a">m4a（不重编码）</button>
+    </div>
+  </div>
+
+  <div class="checks">
+    <label id="subsRow"><input type="checkbox" id="subs" checked> 嵌入字幕</label>
+    <label><input type="checkbox" id="playlist"> 整个播放列表</label>
+  </div>
+
+  <div class="bar-wrap">
+    <div class="bar" id="bar"></div>
+  </div>
+  <div class="stat" id="stat">就绪</div>
+
+  <div class="actions">
+    <button id="start" class="primary">开始下载</button>
+    <button id="cancel" disabled>取消</button>
+  </div>
+
+  <div class="files" id="files" hidden></div>
+
+  <div class="err" id="err" hidden></div>
+  <script src="popup.js"></script>
+</body>
+</html>

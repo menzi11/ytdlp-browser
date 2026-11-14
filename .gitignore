@@ -1,0 +1,14 @@
+# 编译产物（install.ps1 会重新生成）
+host/ytdlp-host.exe
+
+# 安装脚本按本机路径生成，含绝对路径，不入库
+host/manifest.json
+
+# 本机日志
+*.log
+logs/
+
+# 系统垃圾
+Thumbs.db
+.DS_Store
+node_modules/
