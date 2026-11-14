@@ -83,3 +83,7 @@ powershell -ExecutionPolicy Bypass -File install.ps1 -ExtensionId <扩展ID>
 - 依赖系统自带 .NET Framework 的 `csc.exe`、PATH 上的 `node.exe`，以及 `yt-dlp`（先找环境变量 `YTDLP_EXE`，其次 `~/.local/bin/yt-dlp.exe`，最后走 PATH）。
 - 内核是 Chromium 118，较新的扩展 API 不可用（当前实现已避开）。
 - cookies 是账号凭据，随消息只在本机进程间传递，不会写出到磁盘以外的地方（临时文件在 `%LOCALAPPDATA%\ytdlp-browser\cookies`，任务结束即删）。
+
+## License
+
+MIT © 2026 meng ke
